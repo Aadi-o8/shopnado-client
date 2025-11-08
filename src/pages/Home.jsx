@@ -5,7 +5,7 @@ import BestSeller from '../components/BestSeller'
 import Poliscies from '../components/Poliscies'
 import NewsLetterBox from '../components/NewsLetterBox'
 
-const home = () => {
+const Home = () => {
   return (
     <div>
       <Hero/>
@@ -17,4 +17,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
