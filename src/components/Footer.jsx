@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 const Footer = () => {
   return (
     <div>
-        <div  className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-20 text-sm'>
+        <div  className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 m-10 mt-20 text-sm'>
 
             <div>
                 <img src={assets.logo} className='mb-5 w-32' alt="" />
@@ -35,7 +35,7 @@ const Footer = () => {
 
         </div>
 
-        <div>
+        <div className='m-10'>
             <hr />
             <p className='py-5 text-sm text-center '> Copyrights 2025@ shopnado.com - All Rights Reserved.</p>
         </div>
