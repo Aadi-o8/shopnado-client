@@ -61,7 +61,7 @@ const ShopContextProvider = (props)=> {
         if (token) {
             try {
                 
-                await axios.post(import.meta.env.VITE_BACKEND_URL + 'api/cart/update', {itemId, size, quantity}, {headers:{token}});
+                await axios.post(import.meta.env.VITE_BACKEND_URL + '/api/cart/update', {itemId, size, quantity}, {headers:{token}});
 
             } catch (error) {
                 console.log(error);
@@ -76,7 +76,6 @@ const ShopContextProvider = (props)=> {
                 const response = await axios.post(import.meta.env.VITE_BACKEND_URL + '/api/cart/get', {}, {headers:{token}});
                 if (response.data.success) {
                     setCartItems(response.data.cartData);
-                    console.log(response.data);
                 } else{
                     toast.error('gand si fat gyi yar')
                     console.log(response.data);
@@ -108,8 +107,8 @@ const ShopContextProvider = (props)=> {
         setCartItems(cartData);
         if (token) {
             try {
-                const response = await axios.post(import.meta.env.VITE_BACKEND_URL + '/api/cart/add', {itemId, size}, {headers:{token}});
-                console.log(response.data);
+                await axios.post(import.meta.env.VITE_BACKEND_URL + '/api/cart/add', {itemId, size}, {headers:{token}});
+                // console.log(response.data);
             } catch (error) {
                 console.log(error);
                 toast.error(error.message);
