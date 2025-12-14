@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between py-5 font-medium mx-10'>
-        <NavLink to='/'><img src={shopnado} className='w-36' alt="" /></NavLink>
+        <NavLink className={`pr-3`} to='/'><img src={shopnado} className='w-36' alt="" /></NavLink>
 
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
             <NavLink to='/' className={'flex flex-col items-center gap-1'}>
